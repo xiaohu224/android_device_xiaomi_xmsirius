@@ -22,7 +22,12 @@ TARGET_SCREEN_WIDTH := 1080
 # Camera
 PRODUCT_PACKAGES += \
     libpiex_shim
-
+    
+# Fingerprint
+PRODUCT_PACKAGES += \
+    com.fingerprints.extension@1.0.vendor \
+    vendor.goodix.hardware.fingerprintextension@1.0.vendor
+    
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
