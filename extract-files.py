@@ -38,8 +38,6 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     ('vendor/lib/libarcsoft_beautyshot.so', 'vendor/lib/libarcsoft_dualcam_optical_zoom_control.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
-    ('vendor/lib/hw/camera.qcom.so', 'vendor/lib64/libsensorcal.so', 'vendor/lib64/sensors.ssc.so'): blob_fixup()
-        .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-v29.so'),
     'vendor/lib/camera/components/com.qti.node.watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
 }  # fmt: skip
